@@ -123,7 +123,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-        <li class="nav-item"><a class="nav-link" href="#social works">Social Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Social Work">Social Work</a></li>
         <li class="nav-item"><a class="nav-link" href="#accomplishments">Accomplishments</a></li>
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
@@ -167,28 +167,80 @@
   </p>
 </section>
 
-<!-- Education -->
-<section id="education" class="container my-5">
-  <section id="about" class="container my-5 fade-in">
-
+<section id="education" class="container my-5 fade-in">
   <h2>Education</h2>
-  <div class="edu-card d-flex align-items-center">
+
+  <!-- 10th -->
+  <div class="edu-card d-flex align-items-center" onclick="showPopup('popup10')">
+    <img src="apslogo.jpg" alt="APS Logo" class="edu-logo">
+    <div>
+      <strong>Secondary Education</strong><br>
+      <a href="https://apsranchi.com/" target="_blank">Army Public School, Ranchi</a><br>
+      2020–2021<br>
+      <span class="view-more">View More</span>
+    </div>
+  </div>
+
+  <!-- 12th -->
+  <div class="edu-card d-flex align-items-center" onclick="showPopup('popup12')">
+    <img src="apslogo.jpg" alt="APS Logo" class="edu-logo">
+    <div>
+      <strong>Senior Secondary Education</strong><br>
+      <a href="https://apsranchi.com/" target="_blank">Army Public School, Ranchi</a><br>
+      2022–2023<br>
+      <span class="view-more">View More</span>
+    </div>
+  </div>
+
+  <!-- College -->
+  <div class="edu-card d-flex align-items-center" onclick="showPopup('popupCollege')">
     <img src="lpulogo.png" alt="LPU Logo" class="edu-logo">
     <div>
       <strong>B.Tech in Data Science</strong><br>
       <a href="https://www.lpu.in/" target="_blank">Lovely Professional University (LPU), Jalandhar</a><br>
-      Currently pursuing (2023–2027)
+      2023–2027<br>
+      <span class="view-more">View More</span>
     </div>
   </div>
-  <div class="edu-card d-flex align-items-center">
-    <img src="apslogo.jpg" alt="APS Ranchi Logo" class="edu-logo">
-    <div>
-      <strong>Senior Secondary Education</strong><br>
-      <a href="https://apsranchi.com/" target="_blank">Army Public School, Ranchi</a><br>
-      Passed out in 2023
+
+  <!-- Popups -->
+  <div id="popup10" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="hidePopup('popup10')">&times;</span>
+      <h4>10th Summary:</h4>
+      <p><strong>Subjects studied:</strong> Science, Maths, English, Hindi, Social Studies</p>
+      <p><strong>Scored:</strong> 93%</p>
+    </div>
+  </div>
+
+  <div id="popup12" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="hidePopup('popup12')">&times;</span>
+      <h4>Class 12th Summary:</h4>
+      <p><strong>Subjects studied:</strong> Physics, Chemistry, Maths, English, Computer Science</p>
+      <p><strong>Scored:</strong> 91.8%</p>
+    </div>
+  </div>
+
+  <div id="popupCollege" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="hidePopup('popupCollege')">&times;</span>
+      <h4>College Summary:</h4>
+      <p><strong>Branch:</strong> B.Tech in Data Science</p>
+      <p><strong>Subjects:</strong> Python, Java, DBMS, Machine Learning, Statistics, Web Dev</p>
+      <p><strong>Status:</strong> Pursuing (2023–2027)</p>
     </div>
   </div>
 </section>
+<script>
+function showPopup(id) {
+  document.getElementById(id).style.display = "block";
+}
+function hidePopup(id) {
+  document.getElementById(id).style.display = "none";
+}
+</script>
+
 
 <!-- NGO Experience -->
 <section id="ngo" class="container my-5">
@@ -205,19 +257,78 @@
 
 
 <!-- Skills -->
-<section id="skills" class="container my-5">
-  <section id="about" class="container my-5 fade-in">
+<section id="skills" class="container my-5 fade-in">
+  <h2 style="text-align:center;">Skills</h2>
+  <div class="skills-container">
 
-  <h2>Skills</h2>
-  <ul>
-    <li><strong>Programming Languages:</strong> Python, Java, C, C++</li>
-    <li><strong>Web Development:</strong> HTML, CSS, JavaScript, Django, Bootstrap</li>
-    <li><strong>Data Science & AI:</strong> NumPy, Pandas, Matplotlib, Scikit-learn</li>
-    <li><strong>Database:</strong> MySQL</li>
-    <li><strong>Tools & Platforms:</strong> MS Excel, Google Sheets, Git, GitHub, VS Code, Anaconda, ChatGPT, Google Colab, Kaggle</li>
-    <li><strong>Soft Skills:</strong> Problem-solving, Time Management, Teamwork, Communication</li>
-  </ul>
+    <!-- Programming Languages Card -->
+    <div class="skill-card">
+      <h3>💻 Programming Languages</h3>
+      <div class="skill-item"><p>Python</p><div class="progress"><div class="progress-bar" style="width: 90%;"></div></div></div>
+      <div class="skill-item"><p>Java</p><div class="progress"><div class="progress-bar" style="width: 85%;"></div></div></div>
+      <div class="skill-item"><p>C</p><div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></div>
+      <div class="skill-item"><p>C++</p><div class="progress"><div class="progress-bar" style="width: 88%;"></div></div></div>
+    </div>
+
+    <!-- Web Development Card -->
+    <div class="skill-card">
+      <h3>🌐 Web Development</h3>
+      <div class="skill-item"><p>HTML</p><div class="progress"><div class="progress-bar" style="width: 95%;"></div></div></div>
+      <div class="skill-item"><p>CSS</p><div class="progress"><div class="progress-bar" style="width: 90%;"></div></div></div>
+      <div class="skill-item"><p>JavaScript</p><div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></div>
+      <div class="skill-item"><p>Django</p><div class="progress"><div class="progress-bar" style="width: 75%;"></div></div></div>
+      <div class="skill-item"><p>Bootstrap</p><div class="progress"><div class="progress-bar" style="width: 85%;"></div></div></div>
+    </div>
+
+    <!-- Data Science Card -->
+    <div class="skill-card">
+      <h3>📊 Data Science & AI</h3>
+      <div class="skill-item"><p>NumPy</p><div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></div>
+      <div class="skill-item"><p>Pandas</p><div class="progress"><div class="progress-bar" style="width: 82%;"></div></div></div>
+      <div class="skill-item"><p>Matplotlib</p><div class="progress"><div class="progress-bar" style="width: 78%;"></div></div></div>
+      <div class="skill-item"><p>Scikit-learn</p><div class="progress"><div class="progress-bar" style="width: 75%;"></div></div></div>
+    </div>
+
+    <!-- Database Card -->
+    <div class="skill-card">
+      <h3>🗄️ Database</h3>
+      <ul class="tag-list">
+        <li>MySQL</li>
+      </ul>
+    </div>
+
+    <!-- Tools & Platforms Card -->
+    <div class="skill-card">
+      <h3>🛠️ Tools & Platforms</h3>
+      <ul class="tag-list">
+        <li>MS Excel</li>
+        <li>Google Sheets</li>
+        <li>Git</li>
+        <li>GitHub</li>
+        <li>VS Code</li>
+        <li>Anaconda</li>
+        <li>ChatGPT</li>
+        <li>Google Colab</li>
+        <li>Kaggle</li>
+      </ul>
+    </div>
+
+    <!-- Soft Skills Card -->
+    <div class="skill-card">
+      <h3>🤝 Soft Skills</h3>
+      <ul class="tag-list">
+        <li>Problem-solving</li>
+        <li>Time Management</li>
+        <li>Teamwork</li>
+        <li>Communication</li>
+      </ul>
+    </div>
+
+  </div>
 </section>
+
+
+<!-- Projects -->
 <section id="projects" class="container my-5">
   <section id="about" class="container my-5 fade-in">
 
@@ -248,29 +359,63 @@
 </section>
 
 
-<!-- Accomplishments -->
-<section id="accomplishments" class="container my-5">
-  <section id="about" class="container my-5 fade-in">
 
-  <h2>Accomplishments</h2>
-  <ul>
-    <li>
-      Java, C, C++, and DSA – Neo Colab <br>
-      <a href="https://www.linkedin.com/posts/diksha-kumari02_neocolab-learningjourney-programming-activity-7338400322035359744-ERCQ" target="_blank">Show Certificate</a>
-    </li>
-    <li>
-      Master Java, Python, C & C++ – Udemy <br>
-      <a href="https://www.linkedin.com/posts/diksha-kumari02_udemy-programming-java-activity-7340710096085127169-oYuh" target="_blank">Show Certificate</a>
-    </li>
-    <li>
-      Networking and Systems – Coursera:
-      <ul>
-        <li>TCP/IP, Network Communication, Digital Systems, Bits and Bytes, etc.</li>
-      </ul>
-      <a href="https://www.linkedin.com/posts/diksha-kumari02_ive-just-completed-the-computer-communications-activity-7276898668887060480-5ppK" target="_blank">Show Certificate</a>
-    </li>
-    <li>Full Stack Web Development with Django – Ongoing</li>
-  </ul>
+
+
+<section id="accomplishments" class="container my-5 fade-in">
+  <h2 class="text-center mb-4" style="color: #4a90e2;">🌟 Accomplishments</h2>
+  <div class="row g-4">
+    
+    <!-- Neo Colab -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-start border-primary border-4">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-code text-primary me-2"></i>Java, C, C++, DSA – Neo Colab</h5>
+          <p class="card-text">Completed intensive programming training and data structures curriculum.</p>
+          <a href="https://www.linkedin.com/posts/diksha-kumari02_neocolab-learningjourney-programming-activity-7338400322035359744-ERCQ" target="_blank" class="btn btn-sm btn-outline-primary">📄 Show Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Udemy -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-start border-success border-4">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fab fa-python text-success me-2"></i>Master Java, Python, C & C++ – Udemy</h5>
+          <p class="card-text">Gained hands-on experience in multi-language development through real-time projects.</p>
+          <a href="https://www.linkedin.com/posts/diksha-kumari02_udemy-programming-java-activity-7340710096085127169-oYuh" target="_blank" class="btn btn-sm btn-outline-success">📄 Show Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coursera -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-start border-info border-4">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-network-wired text-info me-2"></i>Networking & Systems – Coursera</h5>
+          <ul class="small ps-3">
+            <li>TCP/IP</li>
+            <li>Digital Systems</li>
+            <li>Bits and Bytes</li>
+            <li>Network Communication</li>
+          </ul>
+          <a href="https://www.linkedin.com/posts/diksha-kumari02_ive-just-completed-the-computer-communications-activity-7276898668887060480-5ppK" target="_blank" class="btn btn-sm btn-outline-info">📄 Show Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Django -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-start border-warning border-4">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-laptop-code text-warning me-2"></i>Full Stack Web Development with Django</h5>
+          <p class="card-text">Currently learning complete backend + frontend development using Django, REST APIs, and frontend frameworks.</p>
+          <span class="badge bg-warning text-dark">⏳ Ongoing</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 
@@ -361,5 +506,6 @@
 <footer>
   <p>© 2025 Diksha Upadhyay</p>
 </footer>
+
 </body>
 </html>
